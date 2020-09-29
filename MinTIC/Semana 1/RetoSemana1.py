@@ -3,6 +3,12 @@ def nota_quices(codigo: str, nota1: int, nota2: int, nota3: int, nota4: int, not
     promedio = round(((((nota1+nota2+nota3+nota4+nota5)/4)-(notaMin*0.25))*5)/100,2)
     return "El promedio ajustado del estudiante {} es: {}".format(codigo,promedio)
 
+#versión mejorada
+def nota_quices2(codigo: str, nota1: int, nota2: int, nota3: int, nota4: int, nota5: int) -> str:
+    notaMin = min(nota1,nota2,nota3,nota4,nota5)
+    promedio = round(((((nota1+nota2+nota3+nota4+nota5-notaMin)/4)*5)/100,2)
+    return "El promedio ajustado del estudiante {} es: {}".format(codigo,promedio)
+
 print(nota_quices("AA0010276",19,90,38,55,68))
 print(nota_quices("IS00201620",37,10,50,19,79))
 print(nota_quices("BIO2201810",45,46,33,74,22))
