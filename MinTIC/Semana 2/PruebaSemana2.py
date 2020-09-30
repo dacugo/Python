@@ -1,7 +1,9 @@
 def parqueadero_buses(cantidad_buses,numero_bus):
     p = cantidad_buses % 3 == 0
     q = numero_bus <= cantidad_buses and numero_bus > 0
-    if p and q:
+    r = isinstance (numero_bus,int)
+    s = isinstance (cantidad_buses, int)
+    if p and q and r and s:
         if numero_bus <= cantidad_buses/3:
             resultado = 1
         else:
