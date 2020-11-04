@@ -1,4 +1,4 @@
-def listaFacultades (info:dict)->dict:
+def listaFacultades (info:dict)->list:
 	#Función que se encarga de crear y ordenar la lista de las facultades
 	facultades = set()
 	for value in info.values():
